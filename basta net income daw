@@ -1,0 +1,30 @@
+# Initialize variables
+net_income = 0
+gross_income = 0
+total_deduction = 0
+name_of_employee = ""
+pagibig_contribution = 100.00
+
+# Input the values
+rate_per_hour = int(input("Enter the value of the rate per hour: "))
+number_of_hours_per_day = int(input("Enter the number of hours per day: "))
+number_of_days_per_week = int(input("Enter the number of days per week: "))
+number_of_weeks_per_month = int(input("Enter the number of weeks per month: "))
+SSS_contribution = int(input("Enter the SSS contribution: "))
+Philhealth_contribution = int(input("Enter the Philhealth contribution: "))
+tax_contribution = int(input("Enter the tax contribution: "))
+
+# Calculate gross income
+gross_income = rate_per_hour * number_of_hours_per_day * number_of_days_per_week * number_of_weeks_per_month
+
+# Calculate the total deduction
+total_deduction = SSS_contribution + pagibig_contribution + Philhealth_contribution + tax_contribution
+
+# Calculate net income
+net_income = gross_income - total_deduction
+
+# Display the computed values
+print("Employee name:", name_of_employee)
+print("Net income:", net_income)
+print("Gross income:", gross_income)
+print("Total deduction:", total_deduction)
